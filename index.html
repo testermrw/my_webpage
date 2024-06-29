@@ -5,31 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Example</title>
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
     .grid-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-      gap: 20px; /* Gap between columns */
-      padding: 20px; /* Padding for spacing */
+      grid-template-rows: 100vh; /* Full height of the viewport */
     }
 
     .grid-item {
       padding: 20px;
       border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
     }
 
     .video-container {
       grid-column: 1; /* Place in the first column */
-      background-color: #001100; /* Light gray background */
+      background-color: green; /* Green background */
     }
 
     .column-2 {
       grid-column: 2; /* Place in the second column */
-      background-color: #0000ee; /* Lighter gray background */
+      background-color: yellow; /* Yellow background */
     }
 
     .column-3 {
       grid-column: 3; /* Place in the third column */
-      background-color: #dd0000; /* Lightest gray background */
+      background-color: dodgerblue; /* Blue background */
     }
 
     .video-container video {
@@ -46,7 +56,7 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <div class="grid-item column-2">My My Column 2 Content</div>
+    <div class="grid-item column-2">Column 2 Content</div>
     <div class="grid-item column-3">Column 3 Content</div>
   </div>
 </body>
