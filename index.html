@@ -8,17 +8,24 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
     }
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-      grid-template-rows: 100vh; /* Full height of the viewport */
+    .left-section {
+      flex: 1; /* Take up 50% of the available space */
+      background-color: green; /* Green background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
     }
 
-    .grid-item {
-      padding: 20px;
-      border-radius: 10px;
+    .right-section {
+      flex: 1; /* Take up 50% of the available space */
+      background-color: dodgerblue; /* Blue background */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -28,36 +35,27 @@
     }
 
     .video-container {
-      grid-column: 1; /* Place in the first column */
-      background-color: green; /* Green background */
-    }
-
-    .column-2 {
-      grid-column: 2; /* Place in the second column */
-      background-color: yellow; /* Yellow background */
-    }
-
-    .column-3 {
-      grid-column: 3; /* Place in the third column */
-      background-color: dodgerblue; /* Blue background */
-    }
-
-    .video-container video {
       max-width: 100%;
       border-radius: 10px;
+    }
+
+    .video-wrapper {
+      max-width: 80%;
+      margin: auto;
     }
   </style>
 </head>
 <body>
-  <div class="grid-container">
-    <div class="grid-item video-container">
-      <video controls>
+  <div class="left-section">
+    <div class="video-wrapper">
+      <video controls class="video-container">
         <source src="https://ajmn-aja-vod.akamaized.net/media/v1/pmp4/static/clear/665001584001/14e2aabc-70d6-44bb-9945-89b00e4146a9/a4258ffb-5337-4963-99cc-44d31cc50f69/main.mp4">
         Your browser does not support the video tag.
       </video>
     </div>
-    <div class="grid-item column-2">Column 2 Content</div>
-    <div class="grid-item column-3">Column 3 Content</div>
+  </div>
+  <div class="right-section">
+    <div class="grid-item">Right Section Content</div>
   </div>
 </body>
 </html>
