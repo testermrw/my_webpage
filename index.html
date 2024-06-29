@@ -4,11 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Example</title>
+  <style>
+    .video-container {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center; /* Centers the content horizontally */
+    }
+  </style>
 </head>
 <body>
-  <video controls width="50%" style="max-width: 640px; margin: 0 auto; border-radius: 10px; display: block;">
-    <source src="https://ajmn-aja-vod.akamaized.net/media/v1/pmp4/static/clear/665001584001/14e2aabc-70d6-44bb-9945-89b00e4146a9/a4258ffb-5337-4963-99cc-44d31cc50f69/main.mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div class="video-container">
+    <video controls style="max-width: 100%; border-radius: 10px;">
+      <source src="https://ajmn-aja-vod.akamaized.net/media/v1/pmp4/static/clear/665001584001/14e2aabc-70d6-44bb-9945-89b00e4146a9/a4258ffb-5337-4963-99cc-44d31cc50f69/main.mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 </body>
 </html>
