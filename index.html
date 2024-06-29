@@ -12,8 +12,24 @@
       padding: 20px; /* Padding for spacing */
     }
 
+    .grid-item {
+      padding: 20px;
+      border-radius: 10px;
+    }
+
     .video-container {
       grid-column: 1; /* Place in the first column */
+      background-color: #f0f0f0; /* Light gray background */
+    }
+
+    .column-2 {
+      grid-column: 2; /* Place in the second column */
+      background-color: #e0e0e0; /* Lighter gray background */
+    }
+
+    .column-3 {
+      grid-column: 3; /* Place in the third column */
+      background-color: #d0d0d0; /* Lightest gray background */
     }
 
     .video-container video {
@@ -24,14 +40,14 @@
 </head>
 <body>
   <div class="grid-container">
-    <div class="video-container">
+    <div class="grid-item video-container">
       <video controls>
         <source src="https://ajmn-aja-vod.akamaized.net/media/v1/pmp4/static/clear/665001584001/14e2aabc-70d6-44bb-9945-89b00e4146a9/a4258ffb-5337-4963-99cc-44d31cc50f69/main.mp4">
         Your browser does not support the video tag.
       </video>
     </div>
-    <div>Column 2 Content</div>
-    <div>Column 3 Content</div>
+    <div class="grid-item column-2">Column 2 Content</div>
+    <div class="grid-item column-3">Column 3 Content</div>
   </div>
 </body>
 </html>
