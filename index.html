@@ -5,19 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Example</title>
   <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+      gap: 20px; /* Gap between columns */
+      padding: 20px; /* Padding for spacing */
+    }
+
     .video-container {
-      width: 30%;
-      margin: 0 auto;
-      text-align: center; /* Centers the content horizontally */
+      grid-column: 1; /* Place in the first column */
+    }
+
+    .video-container video {
+      max-width: 100%;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="video-container">
-    <video controls style="max-width: 50%; border-radius: 10px;">
-      <source src="https://ajmn-aja-vod.akamaized.net/media/v1/pmp4/static/clear/665001584001/14e2aabc-70d6-44bb-9945-89b00e4146a9/a4258ffb-5337-4963-99cc-44d31cc50f69/main.mp4">
-      Your browser does not support the video tag.
-    </video>
+  <div class="grid-container">
+    <div class="video-container">
+      <video controls>
+        <source src="https://ajmn-aja-vod.akamaized.net/media/v1/pmp4/static/clear/665001584001/14e2aabc-70d6-44bb-9945-89b00e4146a9/a4258ffb-5337-4963-99cc-44d31cc50f69/main.mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div>Column 2 Content</div>
+    <div>Column 3 Content</div>
   </div>
 </body>
 </html>
